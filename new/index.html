@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI',Arial, sans-serif;
+    }
+
+    .header {
+      background-color: rgb(56, 56, 56);
+    }
+
+    #topPointer {
+      z-index: 2;
+      transform: rotate(180deg);
+      background: transparent;
+      align-self: flex-end;
+      margin-bottom: 5rem;
+    }
+
+    #topPointer h3 {
+      transform: rotate(180deg);
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .bg-image {
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      margin-top: 0;
+      background: url('./desktop.jpg');
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+      outline: 2px solid rgb(61, 61, 61);
+      margin: auto;
+    }
+
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    .body-container {
+      height: fit-content;
+      background-image: linear-gradient(0deg , rgb(138, 138, 138) 0%, rgb(36, 35, 35) 100%);
+      text-align: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 3rem;
+    }
+      
+    .body-container h1 {
+      color: rgb(194, 4, 4);
+      margin-top: 0;
+      padding-top: 3rem;
+      margin-bottom: 5rem;
+      font-size: 4rem;
+    }
+
+    .pre-order-container {
+      text-align: center;
+      margin: auto;
+    }
+
+    .pre-order-link h2 {
+      font-size: 3rem;
+      color: rgb(7, 7, 160);
+    }
+
+    .pre-order-link h2:hover {
+      color: rgb(53, 109, 6);
+    }
+
+    .far.fa-hand-pointer {
+      color: rgb(241, 129, 1);
+      font-size: 3rem;
+      position: relative;
+      animation-name: animated-pointer;
+      animation-duration: .75s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+    }
+
+    @keyframes animated-pointer {
+      from {top: 0.3rem; }
+      to {top: 1.5em; }
+    }
+
+    .far.fa-hand-pointer h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: rgb(255, 124, 1);
+      border: 1px solid rgb(230, 155, 43);
+      border-radius: 5px;
+      padding: .25rem;
+    }
+    
+    #mc_embed_signup {
+      margin-top: 10rem;
+    }
+
+    #emailLabel {
+      color: wheat;
+      font-size: 1rem;
+    }
+
+    #mce-EMAIL[type=email] {
+      padding: 1rem;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      color: rgb(73, 73, 73);
+    }
+
+    #mce-EMAIL::placeholder {
+      color: rgb(158, 157, 157);
+    }
+
+    #mce-EMAIL::placeholder,
+    #mce-EMAIL[type=email] {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    #mc-embedded-subscribe[type=submit] {
+      padding: 0.5rem;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    .videos-container {
+      margin: 10rem auto 5rem auto;
+    }
+
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .video {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+      /* padding-top: 75%; /* 4:3 Aspect Ratio */
+      /* padding-top: 66.66%; /* 3:2 Aspect Ratio */
+      /* padding-top: 62.5%; /* 8:5 Aspect Ratio */
+      /* padding-top: 100%; /* 1:1 Aspect Ratio */
+    }
+
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+
+    @media screen and (max-width: 980px) {
+      .bg-image {
+        max-height: 50rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .bg-image {
+        max-height: 25rem;
+      }
+    }
+      
+  </style>
+
+  <script src="https://kit.fontawesome.com/c7506b7bd2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="bg-image">
+      <i class="far fa-hand-pointer" id="topPointer"><h3>Scroll Down</h3></i>
+    </div>
+  </div>
+  
+  <div class="body-container">
+    <h1>Stark Drive Torque Pre-Order is Live</h1>
+    <div class="pre-order-container">
+      <span class="pre-order-link">
+        <a href="https://starkdrive.bike/accessories/stark-drive-torque-pre-order"><h2>Only 50 Units Available</h2></a>
+      </span>
+      <i class="far fa-hand-pointer"><h3>CLICK HERE</h3></i>
+    </div>
+
+    <div id="mc_embed_signup">
+      <form action="https://world.us20.list-manage.com/subscribe/post?u=1f49b9c3bcd33bca926c95233&amp;id=013de6c56a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+
+        <div id="mc_embed_signup_scroll">
+          <label id="emailLabel" for="mce-EMAIL">Stark Drive Torque will forgo Crowdfunding and opt for a Pre-Order Reservation Model which means a guaranteed delivery <br><br> Sign Up for Information Here</label><br><br>
+
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="email" name="b_1f49b9c3bcd33bca926c95233_013de6c56a" tabindex="-1" value="">
+          </div> -->
+
+          <div class="clear">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+          </div>
+
+        </div>
+      </form>
+      </div>
+
+    <div class="videos-container">
+      <div class="videos">
+
+        <div class="video">
+          <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/hSplUcMDVnw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+
+        <div class="video">
+        <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/KDzIcUtGnjw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+
+        <div class="video">
+        <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/EfsRZMdiqaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+
+        <div class="video">
+        <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/bl4ttX0nhLU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="countdown-assets/countdown/jquery.countdown.js"></script>
+  <script src="countdown-assets/js/script.js?4562346"></script>
+  
+</body>
+
+</html>
